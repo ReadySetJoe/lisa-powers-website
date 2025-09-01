@@ -27,14 +27,6 @@ const Header = ({ showNav = true }: HeaderProps) => {
           <Link href="/">Home</Link>
         </nav>
       )}
-
-      <Image
-        src="/images/logo-initials-filled-bkgd.png"
-        alt="logo initials"
-        width={100}
-        height={100}
-        className="hidden md:block"
-      />
     </header>
   );
 };
