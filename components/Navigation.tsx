@@ -19,7 +19,7 @@ export default function Navigation() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           <Link href="/" className="text-xl font-semibold text-primary hover:text-primary-hover transition-colors">
-            Lisa's Local Services
+            Lisa&apos;s Local Services
           </Link>
           
           <div className="hidden md:flex space-x-6">
