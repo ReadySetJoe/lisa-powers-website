@@ -4,53 +4,9 @@ import Image from "next/image";
 import Link from "next/link";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import { SERVICES } from "@/utils/services";
 
 export default function Home() {
-  const services = [
-    {
-      title: "House Sitting",
-      desc: "Reliable care for your home when you’re away.",
-      img: "/images/house-sitting.jpg",
-      slug: "house-sitting",
-    },
-    {
-      title: "Pet Sitting",
-      desc: "Compassionate attention for your furry family members.",
-      img: "/images/pet-sitting.jpg",
-      slug: "pet-sitting",
-    },
-    {
-      title: "Photo Archiving",
-      desc: "Organize and preserve precious family memories.",
-      img: "/images/photo-archiving.jpg",
-      slug: "photo-archiving",
-    },
-    {
-      title: "Bracelet Making",
-      desc: "Custom, handmade bracelets crafted with care.",
-      img: "/images/bracelet-making.jpg",
-      slug: "bracelet-making",
-    },
-    {
-      title: "Monogramming",
-      desc: "Personalized monogrammed gifts and keepsakes.",
-      img: "/images/monogramming.jpg",
-      slug: "monogramming",
-    },
-    {
-      title: "Weekday Meal Help",
-      desc: "Support with shopping, prepping, and family meals.",
-      img: "/images/weekday-meal-help.jpg",
-      slug: "weekday-meal-help",
-    },
-    {
-      title: "Car Pool Help",
-      desc: "Dependable transportation support for busy families.",
-      img: "/images/car-pool-help.jpg",
-      slug: "car-pool-help",
-    },
-  ];
-
   return (
     <>
       <Head>
@@ -78,30 +34,33 @@ export default function Home() {
           height={400}
           style={{
             objectFit: "cover",
-            marginLeft: "20px",
             borderRadius: "10px",
           }}
+          className="md:ml-4"
         />
       </section>
 
       <section id="services" className={styles.services}>
-        {services.map((service, idx) => (
-          <Link
-            key={idx}
-            href={`/services/${service.slug}`}
-            className={styles.service}
-          >
-            <Image
-              src={service.img}
-              alt={service.title}
-              width={400}
-              height={200}
-              style={{ objectFit: "cover" }}
-            />
-            <h3>{service.title}</h3>
-            <p>{service.desc}</p>
-          </Link>
-        ))}
+        {Object.keys(SERVICES).map((key, idx) => {
+          const service = SERVICES[key];
+          return (
+            <Link
+              key={idx}
+              href={`/services/${key}`}
+              className={styles.service}
+            >
+              <Image
+                src={service.img}
+                alt={service.title}
+                width={400}
+                height={200}
+                style={{ objectFit: "cover" }}
+              />
+              <h3>{service.title}</h3>
+              <p>{service.desc}</p>
+            </Link>
+          );
+        })}
       </section>
 
       <section id="contact" className={styles.contact}>
