@@ -2,11 +2,11 @@
 
 :root {
   --background: #faf9f7;
-  --foreground: #2c3e50;
-  --primary: #8b7355;
-  --primary-hover: #6d5a45;
+  --foreground: #323b60;
+  --primary: #323b60;
+  --primary-hover: #23294a;
   --secondary: #e8d5c4;
-  --accent: #d4a574;
+  --accent: #323b60;
   --card-bg: #ffffff;
   --border: #e5e5e5;
 }

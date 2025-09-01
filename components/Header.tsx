@@ -11,7 +11,7 @@ const Header = ({ showNav = true }: HeaderProps) => {
     <header className={styles.header}>
       <Link href="/">
         <Image
-          src="/images/logo-full-name-taupe-bkgd.png"
+          src="/images/logo-full-name-filled-bkgd.png"
           alt="Lisa Powers Family Services"
           width={200}
           height={100}
@@ -29,7 +29,7 @@ const Header = ({ showNav = true }: HeaderProps) => {
       )}
 
       <Image
-        src="/images/logo-initials-taupe-bkgd.png"
+        src="/images/logo-initials-filled-bkgd.png"
         alt="logo initials"
         width={100}
         height={100}

@@ -8,9 +8,9 @@ body {
 
 /* Brand Colors */
 :root {
-  --brand: #967f71; /* main color */
-  --brand-light: #b8a79d;
-  --brand-bg: #f5f3f2;
+  --brand: #323b60; /* main color */
+  --brand-light: #4a5073;
+  --brand-bg: #e6eaf5;
 }
 
 /* Header */
