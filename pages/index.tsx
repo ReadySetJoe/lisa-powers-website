@@ -28,7 +28,7 @@ export default function Home() {
           </p>
         </div>
         <Image
-          src="/images/lisa-beach.jpg"
+          src="/images/lisa-beach.jpeg"
           alt="Hero Image"
           width={360}
           height={400}
